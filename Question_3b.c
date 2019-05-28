@@ -7,7 +7,7 @@
 
 void EINT1Callback(void) 
 {
-    DrvGPIO_ClrBit(E_GPB,11); // GPB11 = 0 to turn on Buzzer
+	DrvGPIO_ClrBit(E_GPB,11); // GPB11 = 0 to turn on Buzzer
 	DrvGPIO_SetBit(E_GPB,11); // GPB11 = 1 to turn off Buzzer	
 	Initial_panel(); 
 	clr_all_panel();
@@ -24,9 +24,9 @@ int main (void)
 	DrvSYS_SelectHCLKSource(0);         // clock source = 12MHz Crystal
 	LOCKREG();
 	DrvGPIO_Open(E_GPB, 11, E_IO_OUTPUT); // initial GPIO pin GPB11 for controlling Buzzer
-    DrvGPIO_Open(E_GPB, 15, E_IO_INPUT);                             // configure external interrupt pin GP
-    DrvGPIO_EnableEINT1(E_IO_BOTH_EDGE, E_MODE_EDGE, EINT1Callback); // configure external interrupt
-    while(1)
-    {
-    }
+	DrvGPIO_Open(E_GPB, 15, E_IO_INPUT);                             // configure external interrupt pin GP
+	DrvGPIO_EnableEINT1(E_IO_BOTH_EDGE, E_MODE_EDGE, EINT1Callback); // configure external interrupt
+	while(1)
+	{
+	}
 }
