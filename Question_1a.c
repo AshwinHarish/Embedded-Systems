@@ -18,7 +18,8 @@ int32_t main (void)
     print_lcd(0,"variable resistor");
 
   	DrvADC_Open(ADC_SINGLE_END,ADC_SINGLE_OP , 0x40,INTERNAL_HCLK , 1); 	
-  	while(1)
+  	
+	while(1)
     {
         DrvADC_StartConvert();   // start A/D conversion
         while(DrvADC_IsConversionDone()==FALSE);
