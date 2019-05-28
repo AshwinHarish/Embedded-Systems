@@ -1,4 +1,4 @@
-#include <stdio.h>																											 
+#include <stdio.h>
 #include "NUC1xx.h"
 #include "Driver\DrvSYS.h"
 #include "Seven_Segment.h"
@@ -7,7 +7,7 @@
 
 void seg_display(int16_t value)
 {
-    int8_t digit;
+	int8_t digit;
 	digit = value / 1000;
 	close_seven_segment();
 	show_seven_segment(3,digit);
@@ -42,8 +42,8 @@ int32_t main (void)
 	LOCKREG();			 	
  	while(1) 
 	{	
-        DrvSYS_Delay(500);	 
-	    val=val++ ;
-	    seg_display(val);			     
+		DrvSYS_Delay(500);	 
+		val=val++ ;
+		seg_display(val);			     
 	}
 }
