@@ -19,8 +19,7 @@ int main (void)
 	UNLOCKREG();			    // unlock register for programming
   	DrvSYS_Open(48000000);      // set System Clock to run at 48MHz
 	LOCKREG();				    // lock register from programming
-
-    Init_LED();        // Initialize LEDs (four on-board LEDs below LCD panel)	
+	Init_LED();        // Initialize LEDs (four on-board LEDs below LCD panel)	
 
 	while (1)				   // forever loop to keep flashing four LEDs one at a time
 	{
