@@ -9,7 +9,7 @@ int32_t main (void)
 {    
 	UNLOCKREG();
 	LOCKREG();
-	InitPWM(0);
+	InitPWM();
 	Initial_panel(); 
 	clr_all_panel();
 	print_lcd(0,"variable reistor");
