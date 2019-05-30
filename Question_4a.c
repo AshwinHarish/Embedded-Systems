@@ -1,4 +1,4 @@
-#include <stdio.h>																											 
+#include <stdio.h>
 #include "NUC1xx.h"
 #include "Driver\DrvSYS.h"
 #include "DrvPWM.h"
@@ -7,6 +7,7 @@
 
 int32_t main (void)
 {    
+	char TEXT[16];
 	UNLOCKREG();
 	SYSCLK->PWRCON.XTL12M_EN = 1; //Enable 12Mhz and set HCLK->12Mhz
 	SYSCLK->CLKSEL0.HCLK_S = 0;
@@ -21,7 +22,7 @@ int32_t main (void)
         	DrvADC_StartConvert();   // start A/D conversion
         	while(DrvADC_IsConversionDone()==FALSE);
         	PWMA->CMR0=ADC->ADDR[7].RSLT<<4;
-        	sprintf(value,"%d",ADC->ADDR[7].RSLT);
-        	print_lcd(1, value);
+        	sprintf(TEXT,"%d",ADC->ADDR[7].RSLT);
+        	print_lcd(1, TEXT);
     	}
 }	
