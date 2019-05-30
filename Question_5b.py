@@ -3,12 +3,6 @@ import time
 
 pin=17
 GPIO.setmode(GPIO.BCM)
-GPIO.setmode(GPIO.BCM)
-GPIO.setmode(GPIO.BCM)
-GPIO.setmode(GPIO.BCM)
-GPIO.setmode(GPIO.BCM)
-GPIO.setmode(GPIO.BCM)
-GPIO.setmode(GPIO.BCM)
 GPIO.setup(pin, GPIO.OUT)
 GPIO.output(pin, False)
 while True:
