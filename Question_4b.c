@@ -34,7 +34,6 @@ void seg_display(int16_t value)
 
 int32_t main (void)
 {
-	char TEXT1[16];
 	int val;
 	val=0000;
 	UNLOCKREG();
