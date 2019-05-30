@@ -8,6 +8,8 @@
 int32_t main (void)
 {    
 	UNLOCKREG();
+	SYSCLK->PWRCON.XTL12M_EN = 1; //Enable 12Mhz and set HCLK->12Mhz
+	SYSCLK->CLKSEL0.HCLK_S = 0;
 	LOCKREG();
 	InitPWM();
 	Initial_panel(); 
