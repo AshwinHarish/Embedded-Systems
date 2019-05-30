@@ -24,12 +24,24 @@ int main (void)
     	Init_LED();        // Initialize LEDs (four on-board LEDs below LCD panel)	
 	while (1)				   // forever loop to keep flashing four LEDs one at a time
 	{
-		DrvGPIO_SetPortBits(E_GPC,0x0000);
+		DrvGPIO_SetPortBits(E_GPC,0x7000);
+		DrvSYS_Delay(100000);
+		DrvGPIO_SetPortBits(E_GPC,0xb000);
+		DrvSYS_Delay(100000);
+		DrvGPIO_SetPortBits(E_GPC,0xd000);
+		DrvSYS_Delay(100000);
+		DrvGPIO_SetPortBits(E_GPC,0xe000);
 		DrvSYS_Delay(100000);
 		DrvGPIO_SetPortBits(E_GPC,0xf000);
 		DrvSYS_Delay(100000);
 		
-		DrvGPIO_SetPortBits(E_GPA,0x0000);
+		DrvGPIO_SetPortBits(E_GPA,0x7000);
+		DrvSYS_Delay(100000);
+		DrvGPIO_SetPortBits(E_GPA,0xb000);
+		DrvSYS_Delay(100000);
+		DrvGPIO_SetPortBits(E_GPA,0xd000);
+		DrvSYS_Delay(100000);
+		DrvGPIO_SetPortBits(E_GPA,0xe000);
 		DrvSYS_Delay(100000);
 		DrvGPIO_SetPortBits(E_GPA,0xf000);
 		DrvSYS_Delay(100000);
